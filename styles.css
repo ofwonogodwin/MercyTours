@@ -28,28 +28,61 @@ header.scrolled .mobile-menu-btn {
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(45, 80, 22, 0.6), rgba(139, 69, 19, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23228B22" width="1200" height="600"/><circle fill="%23DAA520" cx="200" cy="100" r="40"/><rect fill="%234B7C59" x="0" y="400" width="1200" height="200"/><polygon fill="%236B8E23" points="300,300 400,200 500,300 400,400"/><ellipse fill="%238B4513" cx="800" cy="250" rx="60" ry="30"/><rect fill="%23DAA520" x="900" y="150" width="60" height="20"/><circle fill="%236B8E23" cx="600" cy="400" r="25"/></svg>');
+    background-image: linear-gradient(rgba(45, 80, 22, 0.7), rgba(139, 69, 19, 0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23228B22" width="1200" height="600"/><circle fill="%23DAA520" cx="200" cy="100" r="40"/><rect fill="%234B7C59" x="0" y="400" width="1200" height="200"/><polygon fill="%236B8E23" points="300,300 400,200 500,300 400,400"/><ellipse fill="%238B4513" cx="800" cy="250" rx="60" ry="30"/><rect fill="%23DAA520" x="900" y="150" width="60" height="20"/><circle fill="%236B8E23" cx="600" cy="400" r="25"/></svg>');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     position: relative;
 }
 
-/* Hero text enhancements */
+/* Floating animations */
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+    animation-delay: -2s;
+}
+
+.floating-element:nth-child(3) {
+    animation-delay: -4s;
+}
+
+.floating-element:nth-child(4) {
+    animation-delay: -6s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+/* Hero enhancements */
 .hero-title {
-    font-size: 4rem;
-    font-weight: 900;
-    line-height: 1.1;
-    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-    letter-spacing: -0.02em;
+    text-shadow: 3px 6px 12px rgba(0, 0, 0, 0.6);
+    letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.6;
-    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-    margin: 0 auto;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Button hover effects */
+.btn-glow:hover {
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.6);
+}
+
+/* Card hover effects */
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .hero-cta {
