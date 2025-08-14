@@ -1,0 +1,239 @@
+/* Custom CSS for Mercy Tours & Travels */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header styling */
+header {
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header.scrolled h1,
+header.scrolled p,
+header.scrolled a:not(.bg-safari-gold) {
+    color: #2D5016 !important;
+    text-shadow: none !important;
+}
+
+header.scrolled .mobile-menu-btn {
+    color: #2D5016 !important;
+    border-color: #2D5016 !important;
+}
+
+.hero-bg {
+    background-image: linear-gradient(rgba(45, 80, 22, 0.6), rgba(139, 69, 19, 0.4)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23228B22" width="1200" height="600"/><circle fill="%23DAA520" cx="200" cy="100" r="40"/><rect fill="%234B7C59" x="0" y="400" width="1200" height="200"/><polygon fill="%236B8E23" points="300,300 400,200 500,300 400,400"/><ellipse fill="%238B4513" cx="800" cy="250" rx="60" ry="30"/><rect fill="%23DAA520" x="900" y="150" width="60" height="20"/><circle fill="%236B8E23" cx="600" cy="400" r="25"/></svg>');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Hero text enhancements */
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.6;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-cta {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #DAA520, #B8860B);
+    box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(218, 165, 32, 0.6);
+    background: linear-gradient(135deg, #B8860B, #DAA520);
+}
+
+/* Floating elements animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+    animation-delay: -2s;
+}
+
+.floating-element:nth-child(3) {
+    animation-delay: -4s;
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 8px 30px rgba(218, 165, 32, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 8px 20px rgba(218, 165, 32, 0.4);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Mobile responsive hero text */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+    }
+
+    .hero-cta {
+        font-size: 1.1rem;
+        padding: 0.875rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+}
+
+.gallery-image {
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Review Card Styles */
+.review-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stars {
+    color: #DAA520;
+}
+
+/* Testimonial Carousel */
+.testimonial-carousel {
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    transition: transform 0.5s ease;
+}
+
+/* Custom scrollbar for testimonials */
+.testimonials-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.testimonials-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb {
+    background: #2D5016;
+    border-radius: 10px;
+}
+
+.testimonials-container::-webkit-scrollbar-thumb:hover {
+    background: #1a2e0c;
+}
+
+/* Animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Star rating animation */
+@keyframes starPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.star-animate {
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .review-card {
+        margin-bottom: 1rem;
+    }
+
+    .testimonials-container {
+        overflow-x: auto;
+    }
+}
